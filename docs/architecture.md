@@ -53,27 +53,19 @@ Example:
 
 
 ## Output
-
 - Partitioned Parquet files written to S3 under the configured prefix
-
 - Glue Data Catalog table updated with new partitions
-
 - Athena-ready dataset for analytics and reporting
 
 
-## Notes / Assumptions
+##  Notes / Assumptions
 
-- The API may return empty results for some dates; those dates are skipped and the pipeline continues.
-
-- The S3 layout follows Hive-style partitioning: prefix/date=YYYY-MM-DD/.
-
-- Glue Crawler is expected to be configured to detect partitions under the chosen prefix.
-
-- Parquet files are written to Lambda /tmp then uploaded to S3 (Lambda ephemeral storage).
-
-- Environment variables (BUCKET_NAME, API_URL, ISO_CODE, PREFIX) are configured on the Lambda function.
-
-- This repo contains no sensitive/company data; bucket/table names in docs are placeholders.
+-The API may return empty results for some dates; those dates are skipped and the pipeline continues.
+-The S3 layout follows Hive-style partitioning: prefix/date=YYYY-MM-DD/.
+-Glue Crawler is expected to be configured to detect partitions under the chosen prefix.
+-Parquet files are written to Lambda /tmp then uploaded to S3 (Lambda ephemeral storage).
+-Environment variables (BUCKET_NAME, API_URL, ISO_CODE, PREFIX) are configured on the Lambda function.
+-This repo contains no sensitive/company data; bucket/table names in docs are placeholders.
 
 
 
