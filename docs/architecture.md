@@ -50,9 +50,9 @@ Example:
   "start_date": "2021-01-01",
   "end_date": "2021-01-31"
 }
+```
 
-
-** Output **
+## Output 
 - Partitioned Parquet files written to S3 under the configured prefix
 - Glue Data Catalog table updated with new partitions
 - Athena-ready dataset for analytics and reporting
